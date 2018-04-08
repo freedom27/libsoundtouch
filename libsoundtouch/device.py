@@ -313,6 +313,10 @@ class SoundTouchDevice:
         """Select BLUETOOTH source."""
         self.select_content_item(Source.BLUETOOTH)
 
+    def select_source_tv(self):
+        """Select TV source."""
+        self.select_content_item(Source.PRODUCT, source_account='TV')
+
     def _create_zone(self, slaves):
         if len(slaves) <= 0:
             raise NoSlavesException()
